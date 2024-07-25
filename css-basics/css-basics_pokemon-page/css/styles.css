@@ -95,22 +95,25 @@ section {
 
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
-/* add selector */
- {
+ul {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-/* add selector */
- {
-  padding-left: /* add value */ ;
+.favourites p {
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* ------- The End -------- */
 
 .image-fluid {
-  width: 100%;
-  height: auto;
+  width: 15%;
+  display: block;
+  margin-left: 15px;
 }
 
 /* Note: After finishing all tasks this class should also work. This means that the image should flexibly adjust its size to the width of the viewport. */
