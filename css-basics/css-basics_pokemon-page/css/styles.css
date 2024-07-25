@@ -78,7 +78,17 @@ section {
 */
 
 .subtitle {
-  /* your solution */
+  border-left: 3px solid gold;
+  border-right: 3px solid gold;
+  padding: 15px;
+  display: inline-block;
+}
+
+.favourites .subtitle {
+  border-left: 3px solid orange;
+  border-right: 3px solid orange;
+  padding: 15px;
+  display: inline-block;
 }
 
 /* ------- List ------- */
