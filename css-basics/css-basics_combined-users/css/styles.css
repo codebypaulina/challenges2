@@ -82,6 +82,24 @@ li {
   For guidance you can include some debug styles.
   To do so, add a "debug" class to the html element.
 */
+aside .user {
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+aside .name {
+  font-size: 16px;
+}
+
+aside .bio {
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+aside .location {
+  font-size: 10px;
+}
 
 /*
   Part 2
@@ -94,3 +112,11 @@ li {
 
   💡 You can use the display property to hide elements.
 */
+ul .bio {
+  display: none;
+}
+
+ul .location {
+  text-align: left;
+  color: darkslategray;
+}
