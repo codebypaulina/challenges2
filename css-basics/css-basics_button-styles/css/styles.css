@@ -29,20 +29,35 @@ button {
 
 /* Add your CSS styles below this line. Feel free to replace the comments with your code. Make sure not to put your code into the comments, because then nothing will happen. */
 
+/*Style me! Change my border, set a border radius or what you want to try out. :) */
 .button1 {
-  /*Style me! Change my border, set a border radius or what you want to try out. :) */
+  border-top: 250px double;
+  border-bottom: 250px double;
+  border-left: 250px double;
+  border-right: 250px double;
+  border-radius: 200px;
 }
 
+/*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
 .button2 {
-  /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
+  border-top: 250px solid lightpink;
+  border-bottom: 250px solid lightcoral;
+  border-left: 250px solid peachpuff;
+  border-right: 250px solid lightsalmon;
+  border-radius: solid 200px;
 }
 
+/*Style me! You can test out changing the font, or font size, ...*/
 .button3 {
-  /*Style me! You can test out changing the font, or font size, ...*/
+  font-size: 50px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: lightcoral;
 }
 
+/*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
 .button4 {
-  /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
+  box-shadow: 35px 20px 15px rgb(156, 175, 156);
 }
 
 /* Feel free to play around with other properties, as well. */
