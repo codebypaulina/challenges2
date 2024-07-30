@@ -248,6 +248,24 @@ width, etc. */
 /* --- */
 
 /* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media {
+  min-width: 900px;
+  .card-section {
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .product-card.--forest {
+    width: 100%;
+  }
+
+  .--desert,
+  .--mountain,
+  .--ocean,
+  .--river,
+  .intro-text {
+    width: 600px;
+    order: 1;
+  }
+}
