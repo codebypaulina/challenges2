@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-black-light: #303030;
+  --color-primary: #8236ff;
+  --color-white: #ffffff;
+  --border-radius-small: 4px;
+  --letter-spacing-small: 0.0025em;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+}
+
 body {
   margin: 0;
   font-family: system-ui;
@@ -11,32 +22,32 @@ body {
 }
 
 header {
-  background: rgb(48 48 48 / 100%);
+  background: var(--color-black-light);
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--color-white);
   line-height: 1.4;
   margin: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing-small);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--spacing-medium);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing-small);
 }
 
 strong {
-  color: #8236ff;
+  color: var(--color-primary);
 }
 
 section {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
-  padding: 16px;
+  gap: var(--spacing-large);
+  padding: var(--spacing-medium);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -57,43 +68,43 @@ figure {
   gap: 10px;
   margin: 0;
   padding: 10px;
-  background-color: #8236ffff;
-  border-radius: 4px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-small);
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-white);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--spacing-small) var(--spacing-medium);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
-  border-radius: 4px;
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius-small);
   background-color: hsl(263, 100%, 61%);
-  color: #fff;
+  color: var(--color-white);
 }
 
 a:hover,
 a:focus-visible {
-  background-color: rgb(48 48 48);
+  background-color: var(--color-black-light);
   text-decoration: none;
 }
 
 mark {
-  background-color: rgb(130, 54, 255);
-  color: #ffffff;
-  border-radius: 4px;
-  letter-spacing: 0.025em;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-small);
+  letter-spacing: var(--letter-spacing-small);
 }
 
 ::selection {
-  background-color: #303030;
-  color: #8236ff;
+  background-color: var(--color-black-light);
+  color: var(--color-primary);
 }
