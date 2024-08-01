@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = "This is the title of the post";
+const content = "This is the content of the post";
+let likes = 5; // "const" changed to "let" //
+const userCreatedPost = "Paulina";
+const isReported = false;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,13 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(title);
+console.log(content);
+console.log(likes);
+console.log(userCreatedPost);
+console.log(isReported);
 
+likes = likes + 1; //  or:  likes = 5 + 1,  or:  likes += 1   //
+
+console.log(likes);
 // --^-- write your code here --^--
