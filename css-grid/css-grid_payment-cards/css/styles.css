@@ -41,6 +41,9 @@ body {
   margin: 0 auto;
   padding: 2rem;
   max-width: 50rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 
   /* Add styles to the container */
 }
