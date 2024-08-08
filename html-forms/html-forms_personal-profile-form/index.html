@@ -10,6 +10,47 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section></section>
+    <section>
+      <form>
+        <p>
+          We want to get to know you! Please enter your personal information
+        </p>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="first-name">First Name:</label>
+          <input type="text" />
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" />
+
+          <label for="birthday">Your Birthday</label>
+          <input type="date" />
+        </fieldset>
+
+        <p>
+          Can you tell us a litte bit more? We want to annoy you with unwanted
+          ads
+        </p>
+
+        <fieldset>
+          <legend>Further Information</legend>
+
+          <label for="fav-color">Favorite Color:</label>
+          <input type="color" value="#E5430F" />
+
+          <label for="fav-pet">What's your favorite pet?</label>
+          <select>
+            <option value="0">--Please choose an option--</option>
+            <option value="1">Agra cadabra</option>
+            <option value="2">Chicken Turtle</option>
+            <option value="3">Fried Egg Jellyfish</option>
+          </select>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </body>
 </html>
