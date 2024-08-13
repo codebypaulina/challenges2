@@ -31,3 +31,23 @@ It should apply the callback function to each element in the array, double each 
     console.log(doubledNumbers); // Output should be [2, 4, 6, 8, 10]
 
 *********************************************************************************************************************************************/
+
+const numbers = [1, 2, 3, 4, 5];
+
+function myMap(numbers, double) {
+  let result = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const resultDoubled = double(numbers[i]);
+
+    result.push(resultDoubled);
+  }
+  return result;
+}
+
+function double(number) {
+  return number * 2;
+}
+
+const doubledNumbers = myMap(numbers, double);
+console.log(`The doubled result is: `, doubledNumbers);
