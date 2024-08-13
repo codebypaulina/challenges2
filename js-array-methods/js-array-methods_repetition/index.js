@@ -35,18 +35,50 @@ const recipes = [
  1: `map` exercises
 */
 
-const onlyTitles = null; // ['Crepes', ...]
+const onlyTitles = recipes.map((recipe) => {
+  return recipe.title;
+});
+// IMPLICIT RETURN:
+// const onlyTitles = recipes.map((recipe) => recipe.title);
+console.log(onlyTitles);
 
-const titlesWithDuration = null; // ['Crepes (60min)', ...]
+// -------------------------------------------------------
 
-const timePerServing = null; // [20, 10, 432, 12]
+const titlesWithDuration = recipes.map((recipe) => {
+  return `${recipe.title} (${recipe.duration} min);`;
+});
+/* IMPLICIT RETURN:
+const titlesWithDuration = recipes.map(
+  (recipe) => `${recipe.title} (${recipe.duration} min)`
+); */
+console.log(titlesWithDuration);
+
+// -------------------------------------------------------
+
+const timePerServing = recipes.map((recipe) => {
+  return recipe.duration / recipe.servings;
+});
+/* IMPLICIT RETURN:
+const timePerServing = recipes.map(
+  (recipe) => recipe.duration / recipe.servings
+); */
+console.log(timePerServing);
+
+// -------------------------------------------------------
 
 // EXTRA:
 
 // HINT: use first map() and then Array.prototype.join() with "method chaining" like so:
 // myArray.map(...).join(', ');
 
-const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
+const allTitlesInOneString = recipes
+  .map((recipe) => {
+    return recipe.title;
+  })
+  .join(", ");
+// IMPLICIT RETURN:
+// const allTitlesInOneString = recipes.map((recipe) => recipe.title).join(", ");
+console.log(allTitlesInOneString);
 
 // For more information how to join an array,
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join#joining_an_array_four_different_ways
@@ -55,11 +87,38 @@ const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
  2: `filter` exercises
 */
 
-const recipesThatOnlyTake60minutesOrLess = null;
+const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) => {
+  return recipe.duration <= 60;
+});
+/* IMPLICIT RETURN:
+const recipesThatOnlyTake60minutesOrLess = recipes.filter(
+  (recipe) => recipe.duration <= 60
+); */
+console.log(recipesThatOnlyTake60minutesOrLess);
 
-const allRecipesWithMoreThan2Servings = null;
+// -------------------------------------------------------
 
-const allRecipesWithTitlesLongerThan12Characters = null;
+const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
+  return recipe.servings > 2;
+});
+/* IMPLICIT RETURN:
+const allRecipesWithMoreThan2Servings = recipes.filter(
+  (recipe) => recipe.servings > 2
+); */
+console.log(allRecipesWithMoreThan2Servings);
+
+// -------------------------------------------------------
+
+const allRecipesWithTitlesLongerThan12Characters = recipes.filter((recipe) => {
+  return recipe.title.length > 12;
+});
+/* IMPLICIT RETURN:
+const allRecipesWithTitlesLongerThan12Characters = recipes.filter(
+  (recipe) => recipe.title.length > 12
+); */
+console.log(allRecipesWithTitlesLongerThan12Characters);
+
+// -------------------------------------------------------
 
 export {
   onlyTitles,
