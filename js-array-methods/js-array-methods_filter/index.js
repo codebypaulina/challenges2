@@ -23,13 +23,48 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  return card.id === "2";
+});
+// IMPLICIT RETUTN:
+// const onlyCardWithIdTwo = cards.filter((card) => card.id === "2");
+console.log(onlyCardWithIdTwo);
 
-const allCardsWith3Tags = null;
+// -------------------------------------------------------
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length === 3;
+});
+// IMPLICIT RETUTN:
+// const allCardsWith3Tags = cards.filter((card) => card.tags.length === 3);
+console.log(allCardsWith3Tags);
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+// -------------------------------------------------------
+
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  return !card.isBookmarked;
+});
+// IMPLICIT RETUTN:
+// const allCardsThatAreNotBookmarked = cards.filter((card) => !card.isBookmarked);
+console.log(allCardsThatAreNotBookmarked);
+
+// -------------------------------------------------------
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  return (
+    (card.tags.includes("html") || card.tags.includes("js")) &&
+    card.isBookmarked
+  );
+});
+/* IMPLICIT RETUTN:
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
+  (card) =>
+    (card.tags.includes("html") || card.tags.includes("js")) &&
+    card.isBookmarked
+); */
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
+
+// -------------------------------------------------------
 
 export {
   onlyCardWithIdTwo,
