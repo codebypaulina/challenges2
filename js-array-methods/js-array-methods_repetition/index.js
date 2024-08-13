@@ -38,13 +38,19 @@ const recipes = [
 const onlyTitles = recipes.map((recipe) => {
   return recipe.title;
 });
+// IMPLICIT RETURN:
+// const onlyTitles = recipes.map((recipe) => recipe.title);
 console.log(onlyTitles);
 
 // -------------------------------------------------------
 
 const titlesWithDuration = recipes.map((recipe) => {
-  return `${recipe.title} (${recipe.duration}min);`;
+  return `${recipe.title} (${recipe.duration} min);`;
 });
+/* IMPLICIT RETURN:
+const titlesWithDuration = recipes.map(
+  (recipe) => `${recipe.title} (${recipe.duration} min)`
+); */
 console.log(titlesWithDuration);
 
 // -------------------------------------------------------
@@ -52,6 +58,10 @@ console.log(titlesWithDuration);
 const timePerServing = recipes.map((recipe) => {
   return recipe.duration / recipe.servings;
 });
+/* IMPLICIT RETURN:
+const timePerServing = recipes.map(
+  (recipe) => recipe.duration / recipe.servings
+); */
 console.log(timePerServing);
 
 // -------------------------------------------------------
@@ -66,6 +76,8 @@ const allTitlesInOneString = recipes
     return recipe.title;
   })
   .join(", ");
+// IMPLICIT RETURN:
+// const allTitlesInOneString = recipes.map((recipe) => recipe.title).join(", ");
 console.log(allTitlesInOneString);
 
 // For more information how to join an array,
@@ -78,6 +90,10 @@ console.log(allTitlesInOneString);
 const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) => {
   return recipe.duration <= 60;
 });
+/* IMPLICIT RETURN:
+const recipesThatOnlyTake60minutesOrLess = recipes.filter(
+  (recipe) => recipe.duration <= 60
+); */
 console.log(recipesThatOnlyTake60minutesOrLess);
 
 // -------------------------------------------------------
@@ -85,6 +101,10 @@ console.log(recipesThatOnlyTake60minutesOrLess);
 const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
   return recipe.servings > 2;
 });
+/* IMPLICIT RETURN:
+const allRecipesWithMoreThan2Servings = recipes.filter(
+  (recipe) => recipe.servings > 2
+); */
 console.log(allRecipesWithMoreThan2Servings);
 
 // -------------------------------------------------------
@@ -92,6 +112,10 @@ console.log(allRecipesWithMoreThan2Servings);
 const allRecipesWithTitlesLongerThan12Characters = recipes.filter((recipe) => {
   return recipe.title.length > 12;
 });
+/* IMPLICIT RETURN:
+const allRecipesWithTitlesLongerThan12Characters = recipes.filter(
+  (recipe) => recipe.title.length > 12
+); */
 console.log(allRecipesWithTitlesLongerThan12Characters);
 
 // -------------------------------------------------------
