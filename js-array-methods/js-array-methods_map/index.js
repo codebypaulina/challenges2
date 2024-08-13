@@ -27,6 +27,8 @@ const cards = [
 const lowerCaseAnswers = cards.map((card) => {
   return card.answer.toLowerCase();
 });
+// IMPLICIT RETURN:
+// const lowerCaseAnswers = cards.map((card) => card.answer.toLocaleLowerCase());
 console.log(lowerCaseAnswers);
 
 // -------------------------------------------------------
@@ -34,6 +36,10 @@ console.log(lowerCaseAnswers);
 const questionsAndAnswersTogether = cards.map((card) => {
   return `${card.question} - ${card.answer}`;
 });
+// IMPLICIT RETURN:
+/* const questionsAndAnswersTogether = cards.map(
+  (card) => `${card.question} - ${card.answer}`
+); */
 console.log(questionsAndAnswersTogether);
 
 // -------------------------------------------------------
