@@ -4,15 +4,52 @@ import { Country } from "./components/Country/Country.js";
 const container = document.querySelector('[data-js="card-container"]');
 const queryInput = document.querySelector('[data-js="query-input"]');
 
+/* TASK 1:
 queryInput.addEventListener("input", (event) => {
   container.innerHTML = "";
 
   const searchString = event.target.value;
 
-  const foundCountry = null;
+  const foundCountry = countries.find((country) =>
+    country.name.startsWith(searchString)
+  );
 
   if (foundCountry) {
     const countryElement = Country(foundCountry);
     container.append(countryElement);
   }
 });
+*/
+
+// TASK 2:
+queryInput.addEventListener("input", (event) => {
+  container.innerHTML = "";
+
+  const searchString = event.target.value;
+
+  const foundCountries = countries.filter((country) =>
+    country.name.startsWith(searchString)
+  );
+
+  foundCountries.forEach((country) => {
+    const countryElement = Country(country);
+    container.append(countryElement);
+  });
+});
+
+/* same result with FOR ... OF:
+queryInput.addEventListener("input", (event) => {
+  container.innerHTML = "";
+
+  const searchString = event.target.value;
+
+  const foundCountries = countries.filter((country) =>
+    country.name.startsWith(searchString)
+  );
+
+  for (const country of foundCountries) {
+    const countryElement = Country(country);
+    container.append(countryElement);
+  }
+});
+*/
