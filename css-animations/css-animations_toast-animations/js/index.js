@@ -3,6 +3,7 @@ console.clear();
 const startButton = document.querySelector('[data-js="start-button"]');
 const toast = document.querySelector('[data-js="toast"]');
 const countdown = document.querySelector('[data-js="countdown"]');
+const body = document.querySelector('[data-js="body"]');
 
 let timeoutId;
 
@@ -25,3 +26,12 @@ function hideToast() {
   toast.classList.add("toast--hidden");
   countdown.classList.remove("countdown--visible");
 }
+
+// body
+startButton.addEventListener("mousedown", () => {
+  body.style.backgroundColor = "#ffcc00";
+});
+
+startButton.addEventListener("mouseup", () => {
+  body.style.backgroundColor = "";
+});
