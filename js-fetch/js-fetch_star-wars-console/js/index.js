@@ -7,6 +7,12 @@ async function fetchData() {
   try {
     const response = await fetch(url); // make sure to wait for all asynchronous operations
 
+    // make sure to handle bad responses from the API as well
+    if (!response.ok) {
+      console.log("Bad response.", response.status);
+      return;
+    }
+
     // log the entire data object
     const data = await response.json(); // make sure to wait for all asynchronous operations
     console.log("data: ", data);
@@ -21,12 +27,6 @@ async function fetchData() {
     // Bonus: Can you log the eye color of R2-D2?
     const r2d2 = data.results.find((character) => character.name === "R2-D2");
     console.log("Eye color of R2D2: ", r2d2.eye_color);
-
-    // make sure to handle bad responses from the API as well
-    if (!response.ok) {
-      console.log("Bad response.", response.status);
-      return;
-    }
   } catch (error) {
     console.log("Oops! Something went wrong. Try again.", error);
   }
