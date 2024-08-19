@@ -18,6 +18,19 @@ export async function fetchNewColor() {
    */
 
   // --v-- your code here --v--
+  try {
+    const response = await fetch(colorApiUrl); // 1. Use the `fetch()` function to get data from the Color API.
+    const data = await response.json(); // 2. Use the `.json()` method to parse the body of the response and convert it into an object.
+    console.log("fetched data: ", data);
 
+    // 3. Inspect the parsed object (e.g. by logging it to the console) and find the hex value and name of the closest named color.
+    const closestNamedHex = data.name.closest_named_hex;
+    const closestNamedColor = data.name.value;
+
+    // 4. Call the `setColorToGuess()` function with the hex value and name of the closest named color.
+    setColorToGuess(closestNamedHex, closestNamedColor);
+  } catch (error) {
+    console.log("Oops! Something went wrong. Try again.", error);
+  }
   // --^-- your code here --^--
 }
