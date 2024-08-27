@@ -1,7 +1,6 @@
+import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import EntryForm from "./components/EntryForm";
-import Entries from "./components/Entries";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -14,7 +13,8 @@ export default function App() {
   );
 }
 
-/*import { useState } from 'react'
+/*
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -48,4 +48,5 @@ function App() {
   )
 }
 
-export default App*/
+export default App
+*/
