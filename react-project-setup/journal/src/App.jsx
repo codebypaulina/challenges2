@@ -1,4 +1,20 @@
-import { useState } from 'react'
+import Header from "./components/Header";
+import Main from "./components/Main";
+import EntryForm from "./components/EntryForm";
+import Entries from "./components/Entries";
+import Footer from "./components/Footer";
+
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
+}
+
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -32,4 +48,4 @@ function App() {
   )
 }
 
-export default App
+export default App*/
