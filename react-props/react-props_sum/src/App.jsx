@@ -1,5 +1,15 @@
 import "./App.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Sum valueA={1} valueB={2} />;
+}
+
+export function Sum({ valueA, valueB }) {
+  const sum = valueA + valueB;
+
+  return (
+    <h1>
+      {valueA} + {valueB} = {sum}
+    </h1>
+  );
 }
