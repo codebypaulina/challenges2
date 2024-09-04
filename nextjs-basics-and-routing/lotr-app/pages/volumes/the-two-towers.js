@@ -1,5 +1,6 @@
-import { volumes } from "@/resources/lib/data";
+import { volumes } from "@/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TheTwoTowers() {
   const volumeSlug = volumes.findIndex(({ slug }) => slug === "the-two-towers");
@@ -22,15 +23,25 @@ export default function TheTwoTowers() {
           );
         })}
       </ul>
+
+      <Image
+        src={currentVolume.cover}
+        alt={`cover image of ${currentVolume.title}`}
+        width={140}
+        height={230}
+      />
+      <br />
+      <br />
+
       {previousVolume ? (
         <Link href={`/volumes/${previousVolume.slug}`}>
-          ← Previous Volume: {previousVolume.title}
+          ← Previous Volume: <strong>{previousVolume.title}</strong>
         </Link>
       ) : null}
       <br />
       {nextVolume ? (
         <Link href={`/volumes/${nextVolume.slug}`}>
-          Next Volume: {nextVolume.title} →
+          Next Volume: <strong>{nextVolume.title}</strong> →
         </Link>
       ) : null}
     </>

@@ -1,4 +1,4 @@
-import { introduction, volumes } from "@/resources/lib/data";
+import { introduction, volumes } from "@/lib/data";
 import Link from "next/link";
 
 /*************************** DYNAMIC: ***************************/
