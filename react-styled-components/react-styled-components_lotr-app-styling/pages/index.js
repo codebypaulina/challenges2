@@ -1,9 +1,14 @@
 import Link from "next/link";
+import styled from "styled-components";
 
 export default function HomePage() {
   return (
-    <div>
+    <Wrapper>
       <Link href="/volumes">Go to all volumes</Link>
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 100px;
+`;
