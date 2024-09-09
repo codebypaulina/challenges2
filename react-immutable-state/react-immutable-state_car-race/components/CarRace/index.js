@@ -24,7 +24,7 @@ export default function CarRace() {
       const car = draft.find((car) => car.emoji === clickedCar.emoji);
 
       car.position.x += coveredDistance;
-      car.position.lastDistance = coveredDistance;
+      car.position.lastDistance += coveredDistance;
     });
 
     /*
@@ -36,7 +36,7 @@ export default function CarRace() {
             position: {
               ...car.position,
               x: car.position.x + coveredDistance,
-              lastDistance: coveredDistance,
+              lastDistance: car.position.lastDistance + coveredDistance,
             },
           };
         } else {
