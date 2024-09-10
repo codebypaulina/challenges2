@@ -18,7 +18,7 @@ So that <I can manage my finances easily & keep them organized>
 #### Acceptance criteria
 
 - The amount, category, & date fields are required
-- If the amount / date is empty, show an error message "XXXXXXXXX"
+- If the amount / date is empty, show an error message "Please enter a valid amount / date"
 - If no category is selected, set a default category "Miscellaneous"
   & show a message "Expense added successfully to _Miscellaneous_"
 - After the expense is added, show a message "Expense added successfully"
@@ -30,7 +30,7 @@ So that <I can manage my finances easily & keep them organized>
 - Add the logic to save the expense to the database
 - Show a confirmation message when the expense is added
 
-...............................................................................................................................
+...........................................................................................
 
 ## INVEST Criteria
 
