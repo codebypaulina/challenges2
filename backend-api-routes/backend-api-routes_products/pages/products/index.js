@@ -1,3 +1,4 @@
+import Link from "next/link";
 import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -14,7 +15,9 @@ export default function ProductsPage() {
       <ul>
         {data.map((product) => (
           <li key={product.id}>
-            <h2>{product.name}</h2>
+            <Link href={`/products/${product.id}`}>
+              <h2>{product.name}</h2>
+            </Link>
             <p>Description: {product.description}</p>
             <p>
               Price: {product.price} {product.currency}

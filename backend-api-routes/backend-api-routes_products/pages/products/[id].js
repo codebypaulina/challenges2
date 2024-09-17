@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 
@@ -13,6 +14,7 @@ export default function ProductDetailsPage() {
 
   return (
     <>
+      <Link href={`/products`}>← Back to Product List</Link>
       <h1>{data.name}</h1>
       <p>Description: {data.description}</p>
       <p>
