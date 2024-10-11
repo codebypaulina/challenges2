@@ -1,8 +1,24 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
+  // Create a separate state for `holiday` and `date`.
+  const [holiday, setHoliday] = useState("");
+  const [date, setDate] = useState("");
+
   function handleSubmit(event) {
     event.preventDefault();
+
+    // The `handleSubmit` function sets both states with its corresponding values.
+    // Do you remember how to access the values of the target fields?
+    const form = event.target;
+
+    setHoliday(form.elements.holiday.value);
+    setDate(form.elements.date.value);
+
+    // When submitting the form, the form fields should be reset and the `holiday` field should be focussed.
+    form.reset();
+    form.elements.holiday.focus;
   }
 
   return (
@@ -29,10 +45,10 @@ export default function App() {
       </form>
       <h2>Output of Submitted Data</h2>
       <p>
-        Favourite Holiday: <span className="output">New Year</span>
+        Favourite Holiday: <span className="output">{holiday}</span>
       </p>
       <p>
-        Date: <span className="output">Well...</span>
+        Date: <span className="output">{date}</span>
       </p>
     </div>
   );
